@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Viagens</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="./assests/style.css">
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="./scripts/script.js"></script>
+</head>
+<body>
+    <!-- Tela de boas-vindas -->
+    <div id="tela-boas-vindas" class="container-boas-vindas">
+        <h1>Bem-vindo ao Sistema de Cadastro de Viagens</h1>
+        <!-- Botão para iniciar o cadastro de viagens -->
+        <button id="botao-iniciar" class="botao">Começar</button>
+        <!-- Botão para ver viagens -->
+        <button id="botao-ver-viagens" class="botao">Ver Viagens</button>
+        <!-- Botão para ver total de viagens -->
+        <button id="botao-ver-total" class="botao">Ver Total de Viagens</button>
+    </div>
+    
+    <!-- Tela do formulário de cadastro de viagens -->
+    <div id="tela-formulario" class="container-formulario" style="display: none;">
+        <h2>Cadastro de Viagens</h2>
+        <form id="formularioViagem">
+            <div class="grupo-formulario">
+                <label for="nomeViagem">Nome da Viagem</label>
+                <input type="text" id="nomeViagem" name="nomeViagem" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="dataPartida">Data de Partida</label>
+                <input type="date" id="dataPartida" name="dataPartida" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="dataRetorno">Data de Retorno</label>
+                <input type="date" id="dataRetorno" name="dataRetorno" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="destino">Destino</label>
+                <input type="text" id="destino" name="destino" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao" required>
+            </div>
+            <!-- Botões para cadastrar, limpar o formulário, limpar todas as viagens e voltar ao menu -->
+            <div class="grupo-botoes">
+                <button type="submit" class="botao">Cadastrar Viagem</button>
+                <button type="button" id="botao-limpar" class="botao">Limpar</button>
+                <button type="button" id="botao-limpar-tudo" class="botao">Limpar Viagens</button>
+                <button type="button" id="botao-voltar" class="botao">Voltar ao Menu</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Tela de visualização das viagens -->
+    <div id="tela-viagens" class="container-viagens" style="display: none;">
+        <h2>Viagens Feitas</h2>
+        <input type="text" id="busca-viagem" placeholder="Buscar viagem pelo nome">
+        <ul id="lista-viagens"></ul>
+        <button type="button" id="botao-voltar-menu-viagens" class="botao">Voltar ao Menu</button>
+    </div>    
+
+    <!-- Tela de visualização do total de viagens -->
+    <div id="tela-total-viagens" class="container-total-viagens" style="display: none;">
+        <h2>Total de Viagens</h2>
+        <div id="total-viagens"></div>
+        <button type="button" id="botao-voltar-menu-total" class="botao">Voltar ao Menu</button>
+    </div>
+
+
+</body>
+</html>
